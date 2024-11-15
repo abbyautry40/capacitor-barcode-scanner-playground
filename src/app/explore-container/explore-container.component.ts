@@ -13,7 +13,8 @@ import {
 export class ExploreContainerComponent {
   @Input() name?: string;
 
-  error = "test";
+  error = "";
+  result = "";
 
   scanBarcode = async () => {
     console.log('listening for scan....');
@@ -25,15 +26,15 @@ export class ExploreContainerComponent {
         scanOrientation: 1
       });
 
-      console.log('result :>> ', result);
-
       this.setScannerResult(result.ScanResult);
     } catch(error: any) {
+      console.log('error :>> ', error);
       this.error = error;
     }
   };
 
   setScannerResult = (result: string) => {
-    console.log(result);
+    console.log('result :>> ', result);
+    this.result = result;
   };
 }
