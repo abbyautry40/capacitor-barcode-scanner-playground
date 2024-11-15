@@ -1,0 +1,9 @@
+{
+  "name": "capacitor-scanning",
+  "integrations": {},
+  "type": "angular",
+  "ssl": {
+    "key": "key.pem",
+    "cert": "cert.pem"
+  }
+}
